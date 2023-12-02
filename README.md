@@ -1,5 +1,5 @@
 
-```markdown
+
 # TrueExplora Travel App
 
 Welcome to TrueExplora, your go-to app for hassle-free travel planning and booking. Built on Web5, this app leverages decentralized identity (DID) and decentralized web nodes (DWNs) to provide a secure and efficient travel experience.
