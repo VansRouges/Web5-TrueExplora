@@ -4,6 +4,8 @@ import { Web5 } from "@web5/api";
 
 const inter = Inter({ subsets: ['latin'] })
 
+const { web5, did: aliceDid } = await Web5.connect();
+
 export default function Home() {
   return (
     <main
