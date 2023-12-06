@@ -5,21 +5,20 @@ import { FaCalendarAlt } from "react-icons/fa";
 const Flights = () => {
   return (
     <>
-      <section className="container lg:px-48 py-12 mx-auto bg-white">
-        <section className="border-2 border-gray-200 rounded-lg pt-6 pb-3">
-          <section className="flex justify-center">
-            <section className="bg-gray-200 rounded-3xl px-6 py-3 flex">
-              <p className="px-6 cursor-pointer text-lg">Economy</p>
-              <p className="px-6 cursor-pointer text-lg">Business Class</p>
-              <p className="px-6 cursor-pointer text-lg">First Class</p>
+      <section className="container lg:px-48 px-8 py-12 mx-auto bg-white overflow-hidden">
+        <section className="border-2 border-gray-100 rounded-lg pt-6 pb-3">
+          <section className="flex justify-center w-full">
+            <section className="bg-gray-100 rounded-2xl lg:px-6 px-12 lg:py-3 py-3 flex lg:flex-row flex-col text-center ">
+              <p className="px-6 lg:py-0 py-2 cursor-pointer text-lg">Economy</p>
+              <p className="px-6 lg:py-0 py-2 cursor-pointer text-lg">Business Class</p>
+              <p className="px-6 lg:py-0 py-2 cursor-pointer text-lg">First Class</p>
             </section>
           </section>
 
           <section className="-m-4 text-center flex">
-            <section className="p-4 md:w-1/4 sm:w-1/2 w-full flex flex-row">
+            <section className="p-4 md:w-1/4 sm:w-1/2 w-full flex lg:flex-row flex-col">
               <div className="px-4 py-6 flex">
-                {/* <FaLocationDot className="w-5 h-5 mt-3 bg-gray-300" /> */}
-                <figure className="mx-2 px-2 py-3 bg-gray-200 rounded-full">
+                <figure className="mx-2 px-2 py-3 bg-gray-100 rounded-full">
                   <FaLocationDot className="w-5 h-5" />
                 </figure>
                 <div className="flex flex-col ml-1">
@@ -29,7 +28,7 @@ const Flights = () => {
               </div>
 
               <div className="px-4 py-6 flex">
-                <figure className="mx-2 px-2 py-4 bg-gray-200 rounded-2xl">
+                <figure className="mx-2 px-2 py-4 bg-gray-100 rounded-2xl">
                   <FaCircleUser className="w-5 h-5" />
                 </figure>
                 <div className="flex flex-col ml-1">
@@ -39,7 +38,7 @@ const Flights = () => {
               </div>
 
               <div className="px-4 py-6 flex">
-                <figure className="mx-2 px-2 py-4 bg-gray-200 rounded-2xl">
+                <figure className="mx-2 px-2 py-4 bg-gray-100 rounded-2xl">
                   <FaCalendarAlt className="w-5 h-5" />
                 </figure>
                 <div className="flex flex-col ml-1">
@@ -49,7 +48,7 @@ const Flights = () => {
               </div>
 
               <div className="px-4 py-6 flex">
-                <figure className="mx-2 px-2 py-4 bg-gray-200 rounded-2xl">
+                <figure className="mx-2 px-2 py-4 bg-gray-100 rounded-2xl">
                   <FaCalendarAlt className="w-5 h-5" />
                 </figure>
                 <div className="flex flex-col ml-1">
@@ -57,11 +56,12 @@ const Flights = () => {
                   <input className="outline-none mt-1" placeholder="Add date" />
                 </div>
               </div>
-
-              {/* <section className="flex">
-                <button className="px-8 py-2 bg-blue-500 rounded-4xl rounded-3xl">Search Flight</button>
-              </section> */}
             </section>
+
+          </section>
+
+          <section className="flex justify-center lg:mb-0 my-2">
+            <button className="px-8 py-2 bg-blue-500 rounded-4xl rounded-3xl text-white">Search Flight</button>
           </section>
 
         </section>

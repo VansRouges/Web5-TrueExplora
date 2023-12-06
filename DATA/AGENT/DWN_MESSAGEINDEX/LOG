@@ -1,5 +1,3 @@
-2023/12/04-19:32:59.489 6de4 Recovering log #3
-2023/12/04-19:32:59.506 6de4 Level-0 table #5: started
-2023/12/04-19:32:59.607 6de4 Level-0 table #5: 27860 bytes OK
-2023/12/04-19:32:59.705 6de4 Delete type=0 #3
-2023/12/04-19:32:59.706 6de4 Delete type=3 #2
+2023/12/06-03:54:29.557 45b0 Recovering log #6
+2023/12/06-03:54:29.928 45b0 Delete type=0 #6
+2023/12/06-03:54:29.928 45b0 Delete type=3 #4

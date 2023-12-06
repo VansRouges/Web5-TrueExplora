@@ -2,9 +2,9 @@
 const Subscribe = () => {
     return (
       <>
-        <div className="max-w-2xl mx-auto py-12">
+        <div className="max-w-2xl mx-auto py-12 px-8 md:px-0">
           <div className="flex flex-col justify-between items-center min-h-18rem">
-            <h1 className="text-3xl mb-6 font-normal">Subscribe Newsletters & get Latest News</h1>
+            <h1 className="md:text-3xl text-2xl mb-6 font-normal">Subscribe Newsletters & get Latest News</h1>
             <div className="w-full relative rounded-full">
               <input
                 type="search"

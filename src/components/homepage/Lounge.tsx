@@ -2,10 +2,10 @@ import Image from 'next/image';
 
 const Lounge = () => {
   return (
-    <section className="container lg:px-48 lg:py-20 mx-auto bg-white">
+    <section className="container lg:px-48 px-5 lg:py-20 mx-auto bg-white">
       
       <section className="flex flex-wrap">
-        <section className="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:text-left text-center">
+        <section className="flex flex-col flex-wrap lg:py-6 lg:w-1/2 text-left">
 
           <section>
             <h2 className="text-gray-900 text-2xl font-medium mb-8">Unaccompanied Minor Lounge</h2>
@@ -45,12 +45,12 @@ const Lounge = () => {
 
         </section>
 
-        <figure className="lg:pl-20 lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
+        <figure className="flex justify-center lg:pl-20 lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
           <Image 
             src="/Assets/images/place.jpeg" 
             width={400}
             height={150}
-            className="object-cover object-center" 
+            className="object-cover object-center lg:w-full lg:h-3/5 w-11/12 h-1/2 rounded-xl mt-6 lg:mt-0" 
             alt="lounge" 
           />
         </figure>
