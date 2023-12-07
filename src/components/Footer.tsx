@@ -9,7 +9,12 @@ const Footer = () => {
                 <section className="flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
                     <section className="w-64 flex-shrink-0 md:mx-0 mx-auto text-left">
                         <article className="flex flex-col">
-                            <Image src="" alt="logo" />
+                            <Image 
+                            src="/Assets/images/plane.png" 
+                            width= {32}
+                            height={32}
+                            alt="logo" 
+                            />
                             <p className="text-gray-500 my-2">Your mind should be stronger than your feelings, fly!</p>
                             <figure className="flex justify-start mt-2">
                                 <div className="mr-2 px-2 py-3 border-2 border-gray-300 rounded-2xl">

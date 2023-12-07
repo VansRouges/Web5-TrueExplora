@@ -8,10 +8,10 @@ const Flights = () => {
       <section className="container lg:px-48 px-8 py-12 mx-auto bg-white overflow-hidden">
         <section className="border-2 border-gray-100 rounded-lg pt-6 pb-3">
           <section className="flex justify-center w-full">
-            <section className="bg-gray-100 rounded-2xl lg:px-6 px-12 lg:py-3 py-3 flex lg:flex-row flex-col text-center ">
-              <p className="px-6 lg:py-0 py-2 cursor-pointer text-lg">Economy</p>
-              <p className="px-6 lg:py-0 py-2 cursor-pointer text-lg">Business Class</p>
-              <p className="px-6 lg:py-0 py-2 cursor-pointer text-lg">First Class</p>
+            <section className="bg-gray-100 rounded-3xl lg:px-6 px-12 lg:py-3 py-3 flex lg:flex-row flex-col text-center ">
+              <p className="px-6 py-2 cursor-pointer text-lg hover:bg-blue-500 hover:rounded-3xl hover:text-white">Economy</p>
+              <p className="px-6 py-2 cursor-pointer text-lg hover:bg-blue-500 hover:rounded-3xl hover:text-white">Business Class</p>
+              <p className="px-6 py-2 cursor-pointer text-lg hover:bg-blue-500 hover:rounded-3xl hover:text-white">First Class</p>
             </section>
           </section>
 
@@ -61,7 +61,7 @@ const Flights = () => {
           </section>
 
           <section className="flex justify-center lg:mb-0 my-2">
-            <button className="px-8 py-2 bg-blue-500 rounded-4xl rounded-3xl text-white">Search Flight</button>
+            <button className="px-8 py-2 bg-blue-500 rounded-4xl rounded-3xl text-white hover:bg-blue-400">Search Flight</button>
           </section>
 
         </section>

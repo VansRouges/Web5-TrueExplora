@@ -36,15 +36,15 @@ const Navbar = () => {
 
 
   return (
-    <header className={`py-4 lg:px-10 px-4 w-full fixed mt-20 ${isTopbarFixed ? 'bg-gray-100' : 'bg-white'}`}>
+    <header className={`lg:py-2 py-0 lg:px-10 px-4 w-full fixed mt-20 z-10 ${isTopbarFixed ? 'bg-gray-100' : 'bg-white'}`}>
       <div className="flex justify-between items-center">
         <figure className="flex font-medium">
           <Image
-            src="/"
+            src="/Assets/images/plane.png"
             width={30}
             height={30}
             className="w-16 h-16 text-white p-2 rounded-full"
-            alt="project logo"
+            alt="logo"
           />
         </figure>
 
@@ -58,7 +58,7 @@ const Navbar = () => {
 
         <div className="hidden lg:flex space-x-4">
           <a href="#" className="text-base flex mt-2">
-            <button className="bg-indigo-500 text-white px-4 py-1 rounded-2xl">Contact</button>
+            <button className="bg-blue-500 text-white px-4 py-1 rounded-2xl">Contact</button>
           </a>
         </div>
 
