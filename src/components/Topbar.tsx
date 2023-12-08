@@ -6,14 +6,14 @@ import { CiGlobe } from "react-icons/ci";
 const Topbar = () => {
   return (
     <>
-      <header className="container mx-auto bg-gray-100 w-full fixed">
-        <section className="flex flex-wrap py-4 lg:px-10 px-1 flex-row justify-between">
+      <header className="container mx-auto bg-gray-100 w-full fixed z-10">
+        <section className="flex flex-wrap py-4 lg:px-8 px-1 flex-row justify-between">
           <figure className="flex font-medium">
             <Image
-              src="/Assets/images/place.jpeg"
-              width={30}
-              height={30}
-              className="w-16 h-16 text-white p-2 rounded-full"
+              src="/Assets/images/plane2.png"
+              width={36}
+              height={36}
+              className="w-12 h-12 text-white p-2 rounded-full"
               alt="logo"
             />
           </figure>
