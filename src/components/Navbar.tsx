@@ -1,100 +1,105 @@
-import { useEffect, useState } from 'react';
-import { TbGridDots } from "react-icons/tb";
-import Image from 'next/image';
+import { Fragment } from 'react'
+import { Disclosure, Menu, Transition } from '@headlessui/react'
+import { HiBars3 } from "react-icons/hi2";
+import { PiBellSimpleBold } from "react-icons/pi";
+import { MdClose } from "react-icons/md";
+import Image from "next/image"
+import Link from "next/link"
 
-const Navbar = () => {
-  // Set state to handle the navbar opening and closing on smalled screen devices
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  // Set state to track whether the topbar is fixed based on the scroll position
-  const [isTopbarFixed, setIsTopbarFixed] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
-
-  // Function used to update `isTopbarFixed` state to change background image of the Navbar component
-  const handleScroll = () => {
-    if (window.scrollY > 0) {
-      setIsTopbarFixed(true);
-    } else {
-      setIsTopbarFixed(false);
-    }
-  };
-
-  // To add and remove the scroll event listener
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-
-  return (
-    <header className={`lg:py-2 py-0 lg:px-10 px-4 w-full fixed mt-20 z-10 ${isTopbarFixed ? 'bg-gray-100' : 'bg-white'}`}>
-      <div className="flex justify-between items-center">
-        <figure className="flex font-medium">
-          <Image
-            src="/Assets/images/plane.png"
-            width={30}
-            height={30}
-            className="w-16 h-16 text-white p-2 rounded-full"
-            alt="logo"
-          />
-        </figure>
-
-        <nav className="hidden lg:flex space-x-4">
-          <a href="#" className="text-base text-gray-700 font-medium hover:underline">Home</a>
-          <a href="#" className="text-base text-gray-700 font-medium hover:underline">About</a>
-          <a href="#" className="text-base text-gray-700 font-medium hover:underline">Offers</a>
-          <a href="#" className="text-base text-gray-700 font-medium hover:underline">Seats</a>
-          <a href="#" className="text-base text-gray-700 font-medium hover:underline">Destinations</a>
-        </nav>
-
-        <div className="hidden lg:flex space-x-4">
-          <a href="#" className="text-base flex mt-2">
-            <button className="bg-blue-500 text-white px-4 py-1 rounded-2xl">Contact</button>
-          </a>
-        </div>
-
-        <div className="lg:hidden">
-          <button
-            className="focus:outline-none"
-            onClick={toggleMenu}
-          >
-            <TbGridDots className="w-6 h-6" />
-          </button>
-        </div>
-      </div>
-      {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-50">
-          <div className="p-4 h-80 w-64 bg-gray-100 rounded-2xl fixed top-40 right-16">
-            <button
-              className="text-2xl absolute top-2 right-2 font-semibold"
-              onClick={closeMenu}
-            >
-              &times;
-            </button>
-            <nav className="flex flex-col space-y-4 justify-center mt-6">
-              <a href="#" className="text-lg flex justify-center">Home</a>
-              <a href="#" className="text-lg flex justify-center">About</a>
-              <a href="#" className="text-lg flex justify-center">Offers</a>
-              <a href="#" className="text-lg flex justify-center">Seats</a>
-              <a href="#" className="text-lg flex justify-center">Destinations</a>
-              <a href="#" className="text-base flex justify-center mt-2">
-                <button className="bg-indigo-500 text-white px-4 py-1 rounded-2xl">Contact</button>
-              </a>
-            </nav>
-          </div>
-        </div>
-      )}
-    </header>
-  )
+interface NavigationItem {
+  name: string;
+  href: string;
+  current: boolean;
 }
 
-export default Navbar
+const navigation: NavigationItem[] = [
+  { name: 'Book a Flight', href: '#', current: false },
+]
+
+function classNames(...classes: string[]) {
+  return classes.filter(Boolean).join(' ')
+}
+
+export default function Example() {
+  return (
+    <Disclosure as="nav" className="">
+      {({ open }) => (
+        <>
+          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div className="relative flex h-16 items-center justify-between">
+              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                {/* Mobile menu button*/}
+                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  <span className="absolute -inset-0.5" />
+                  <span className="sr-only">Open main menu</span>
+                  {open ? (
+                    <MdClose className="block h-6 w-6" aria-hidden="true" />
+                  ) : (
+                    <HiBars3 className="block h-6 w-6" aria-hidden="true" />
+                  )}
+                </Disclosure.Button>
+              </div>
+              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                <div className="flex flex-shrink-0 items-center">
+                  <Image
+                    className="h-10 w-28"
+                    src="/logo.png"
+                    alt="Your Company"
+                    width={2432}
+                    height={1442}
+                  />
+                </div>
+                <div className="hidden sm:mr-6 sm:block">
+                  <div className="flex space-x-4">
+                    {navigation.map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className={classNames(
+                          item.current ? 'bg-gray-900 text-white' : 'text-gray-600 hover:bg-gray-700 hover:text-white',
+                          'rounded-md px-3 py-2 text-sm font-medium'
+                        )}
+                        aria-current={item.current ? 'page' : undefined}
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                {/* Profile dropdown */}
+                <Menu as="div" className="relative ml-3">
+                  <div>
+                    <Link href="#" className="bg-blue-500 p-2 rounded-full text-white">
+                      Copy DID
+                    </Link>
+                  </div>
+                </Menu>
+              </div>
+            </div>
+          </div>
+
+          <Disclosure.Panel className="sm:hidden">
+            <div className="space-y-1 px-2 pb-3 pt-2">
+              {navigation.map((item) => (
+                <Disclosure.Button
+                  key={item.name}
+                  as="a"
+                  href={item.href}
+                  className={classNames(
+                    item.current ? 'bg-gray-900 text-white' : 'text-gray-600 hover:bg-gray-700 hover:text-white',
+                    'block rounded-md px-3 py-2 text-base font-medium'
+                  )}
+                  aria-current={item.current ? 'page' : undefined}
+                >
+                  {item.name}
+                </Disclosure.Button>
+              ))}
+            </div>
+          </Disclosure.Panel>
+        </>
+      )}
+    </Disclosure>
+  )
+}

@@ -5,8 +5,7 @@ import { CiGlobe } from "react-icons/ci";
 
 const Topbar = () => {
   return (
-    <>
-      <header className="container mx-auto bg-gray-100 w-full fixed z-10">
+      <header className="container mx-auto bg-gray-100 w-full fixed z-10 h-12">
         <section className="flex flex-wrap py-4 lg:px-8 px-1 flex-row justify-between">
           <figure className="flex font-medium">
             <Image
@@ -36,7 +35,6 @@ const Topbar = () => {
           </nav>
         </section>
       </header>
-    </>
   )
 }
 

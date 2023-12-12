@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
     "@web5/api": "^0.8.2",
     "crypto-browserify": "^3.12.0",
     "next": "14.0.3",

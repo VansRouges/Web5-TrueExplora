@@ -1,5 +1,6 @@
 import { FaLocationDot, FaCircleUser } from "react-icons/fa6";
 import { FaCalendarAlt } from "react-icons/fa";
+import Link from "next/link"
 
 
 const Flights = () => {
@@ -61,7 +62,7 @@ const Flights = () => {
           </section>
 
           <section className="flex justify-center lg:mb-0 my-2">
-            <button className="px-8 py-2 bg-blue-500 rounded-4xl rounded-3xl text-white hover:bg-blue-400">Search Flight</button>
+            <Link href="/flights" className="px-8 py-2 bg-blue-500 rounded-4xl rounded-3xl text-white hover:bg-blue-400">Search Flight</Link>
           </section>
 
         </section>
