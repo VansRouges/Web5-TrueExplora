@@ -13,7 +13,7 @@ interface NavigationItem {
 }
 
 const navigation: NavigationItem[] = [
-  { name: 'Book a Flight', href: '#', current: false },
+  { name: 'Book a Flight', href: '/flights', current: false },
 ]
 
 function classNames(...classes: string[]) {
@@ -40,7 +40,7 @@ export default function Example() {
                 </Disclosure.Button>
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex flex-shrink-0 items-center">
+                <Link href="/" className="flex flex-shrink-0 items-center">
                   <Image
                     className="h-10 w-28"
                     src="/logo.png"
@@ -48,7 +48,7 @@ export default function Example() {
                     width={2432}
                     height={1442}
                   />
-                </div>
+                </Link>
                 <div className="hidden sm:mr-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
@@ -71,9 +71,9 @@ export default function Example() {
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
                   <div>
-                    <Link href="#" className="bg-blue-500 p-2 rounded-full text-white">
+                    <button className="bg-blue-500 p-2 rounded-full text-white">
                       Copy DID
-                    </Link>
+                    </button>
                   </div>
                 </Menu>
               </div>
