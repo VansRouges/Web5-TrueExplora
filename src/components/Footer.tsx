@@ -10,10 +10,11 @@ const Footer = () => {
                     <section className="w-64 flex-shrink-0 md:mx-0 mx-auto text-left">
                         <article className="flex flex-col">
                             <Image 
-                            src="/Assets/images/plane.png" 
-                            width= {32}
-                            height={32}
-                            alt="logo" 
+                                src="/logo.png" 
+                                className="h-10 w-28"
+                                alt="logo"
+                                width={2432}
+                                height={1442}
                             />
                             <p className="text-gray-500 my-2">Your mind should be stronger than your feelings, fly!</p>
                             <figure className="flex justify-start mt-2">

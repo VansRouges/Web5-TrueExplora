@@ -10,13 +10,15 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
-    "@web5/api": "^0.8.2",
+    "@web5/api": "^0.8.3",
     "crypto-browserify": "^3.12.0",
     "next": "14.0.3",
     "process": "^0.11.10",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^4.12.0",
+    "react-modal": "^3.16.1",
+    "react-toastify": "^9.1.3",
     "stream-browserify": "^3.0.0"
   },
   "devDependencies": {

@@ -1,7 +1,6 @@
 import React from 'react'
 import Navbar from '@/components/Navbar'
-// import Topbar from '@/components/Topbar'
-import FlightList from '@/components/FlightList'
+import FlightList from '@/components/flights/FlightList'
 import Image from "next/image"
 
 function flights() {

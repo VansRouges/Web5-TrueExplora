@@ -3,13 +3,19 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { HiBars3 } from "react-icons/hi2";
 import { PiBellSimpleBold } from "react-icons/pi";
 import { MdClose } from "react-icons/md";
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 
 interface NavigationItem {
   name: string;
   href: string;
   current: boolean;
+}
+
+interface NavbarProps {
+  handleCopyDid?: () => void;
+  didCopied?: boolean;
+  isWeb5Connected?: boolean;
 }
 
 const navigation: NavigationItem[] = [
@@ -20,7 +26,13 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function Navbar({
+  handleCopyDid,
+  didCopied,
+  isWeb5Connected,
+}: NavbarProps) {
+  
+
   return (
     <Disclosure as="nav" className="">
       {({ open }) => (
@@ -40,14 +52,16 @@ export default function Example() {
                 </Disclosure.Button>
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <Link href="/" className="flex flex-shrink-0 items-center">
-                  <Image
-                    className="h-10 w-28"
-                    src="/logo.png"
-                    alt="Your Company"
-                    width={2432}
-                    height={1442}
-                  />
+                <Link href="/">
+                  <div className="flex flex-shrink-0 items-center">
+                    <Image
+                      className="h-10 w-28"
+                      src="/logo.png"
+                      alt="logo"
+                      width={2432}
+                      height={1442}
+                    />
+                  </div>
                 </Link>
                 <div className="hidden sm:mr-6 sm:block">
                   <div className="flex space-x-4">
@@ -71,9 +85,11 @@ export default function Example() {
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
                   <div>
-                    <button className="bg-blue-500 p-2 rounded-full text-white">
-                      Copy DID
+                  {isWeb5Connected && (
+                    <button onClick={handleCopyDid} className="bg-blue-500 p-2 rounded-full text-white">
+                      {didCopied ? "DID Copied!" : "Copy DID"}
                     </button>
+                  )}
                   </div>
                 </Menu>
               </div>
