@@ -7,9 +7,15 @@ const Footer = () => {
         <>
             <footer className="container lg:px-16 py-12 mx-auto ">
                 <section className="flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-                    <section className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-                        <div className="flex flex-col">
-                            <Image src="" alt="logo" />
+                    <section className="w-64 flex-shrink-0 md:mx-0 mx-auto text-left">
+                        <article className="flex flex-col">
+                            <Image 
+                                src="/logo.png" 
+                                className="h-10 w-28"
+                                alt="logo"
+                                width={2432}
+                                height={1442}
+                            />
                             <p className="text-gray-500 my-2">Your mind should be stronger than your feelings, fly!</p>
                             <figure className="flex justify-start mt-2">
                                 <div className="mr-2 px-2 py-3 border-2 border-gray-300 rounded-2xl">
@@ -25,9 +31,9 @@ const Footer = () => {
                                     <FaPinterestP />
                                 </div>
                             </figure>
-                        </div>
+                        </article>
                     </section>
-                    <section className="flex-grow flex flex-wrap md:pl-8 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+                    <section className="flex-grow flex flex-wrap md:pl-8 -mb-10 md:mt-0 mt-10 text-left">
                         <div className="lg:w-1/3 md:w-1/2 w-full px-4">
                             <h2 className="font-semibold text-lg mb-3">Information</h2>
                             <nav className="list-none mb-10">
