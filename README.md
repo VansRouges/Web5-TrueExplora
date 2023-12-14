@@ -1,5 +1,4 @@
 
-
 # TrueExplora Travel App
 
 Welcome to TrueExplora, your go-to app for hassle-free travel planning and booking. Built on Web5, this app leverages decentralized identity (DID) and decentralized web nodes (DWNs) to provide a secure and efficient travel experience.
@@ -33,7 +32,7 @@ Welcome to TrueExplora, your go-to app for hassle-free travel planning and booki
 git clone https://github.com/your-username/TrueExplora.git
 ```
 
-2. Install dependencies.
+2.Install dependencies.
 
 ```bash
 cd TrueExplora
@@ -42,7 +41,7 @@ npm install
 yarn install
 ```
 
-3. Run the app.
+3.Run the app.
 
 ```bash
 npm run dev
@@ -59,6 +58,5 @@ We welcome contributions! If you'd like to enhance TrueExplora or fix any issues
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-```
 
 Feel free to customize it according to your project structure and additional information you want to include.
